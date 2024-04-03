@@ -37,37 +37,37 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-menu">
       
   <nav>
-<h2 class="book-brand">
-  <a href="/"><span>Gustavo Kasper Facenda</span>
-  </a>
-</h2>
+    <h2 class="book-brand">
+      <a href="/"><span>Gustavo Kasper Facenda</span>
+      </a>
+    </h2>
 
-  <ul>
-<li><a href="/">About me</a></li>
-<li><a href="/papers/"class=active>Publications</a></li>
-</ul>
-<ul>
-  <li>
-    <a href="https://github.com/GKasperF/" target="_blank" rel="noopener">
-        Github
-      </a>
-  </li>
-  
-  <li>
-    <a href="https://scholar.google.com/citations?user=VNXac_8AAAAJ" target="_blank" rel="noopener">
-        Google Scholar
-      </a>
-  </li>
-  
-  <li>
-    <a href="/cv.pdf" target="_blank" rel="noopener">
-        CV
-      </a>
-  </li>
-  
-</ul>
+    <ul>
+    <li><a href="/">About me</a></li>
+    <li><a href="/papers/"class=active>Publications</a></li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://github.com/GKasperF/" target="_blank" rel="noopener">
+            Github
+          </a>
+      </li>
+      
+      <li>
+        <a href="https://scholar.google.com/citations?user=VNXac_8AAAAJ" target="_blank" rel="noopener">
+            Google Scholar
+          </a>
+      </li>
+      
+      <li>
+        <a href="/cv.pdf" target="_blank" rel="noopener">
+            CV
+          </a>
+      </li>
+      
+    </ul>
 
-</nav>
+  </nav>
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
@@ -110,35 +110,54 @@ https://github.com/alex-shpak/hugo-book
  
       </header>
 
+For an updated list of publications, I recommend checking my <a href="https://scholar.google.com/citations?user=VNXac_8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
 <h1 id="journal-papers">Journal Publications</h1>
 <ul>
+  <li>
+    <strong>Deep Reinforcement Learning for Latency-Sensitive Communication With Adaptive Redundant Retransmissions</strong><br>
+    Gustavo Kasper Facenda, Ashish Khisti, Wai-Tian Tan and John Apostolopoulos<br>
+    IEEE Transactions on Communications, 2023.
+  </li>
+  <button onclick="myFunction('DRL-tcom')">Show Abstract</button> Available on <a href="https://ieeexplore.ieee.org/abstract/document/10075625" target="_blank">IEEExplore</a>.
+  <div class="markdown-inner" id='DRL-tcom' style='display:none'>
+  <p>This paper studies packet repetition strategies over erasure channels with memory and a long feedback delay. The problem is initially formulated as a communications problem where a source wishes to transmit one message packet to a destination while minimizing both the delay and the number of transmissions. At each time instant, the sender is provided a delayed acknowledgement feedback about past attempts, and must decide whether to attempt a new transmission or not. This problem is then re-formulated as an episodic reinforcement learning problem, where an agent attempts to learn the optimal transmission policy, provided delayed feedback about past transmission attempts. The agent is helped by a channel estimator, which attempts to capture the channel memory and use that to predict probabilities of erasures in a future window. This channel estimator is also data-driven and learns the channel model without any a priori channel knowledge. The paper presents a lower bound on the achievable trade-off between delay and number of transmissions for any channel modeled as a Markov process. Experimental results show that the combination of the proposed channel estimator and the agent can noticeably outperform naive strategies for channels with memory, and achieves results close to the lower bound.
+  </p></div>
 
-  <li><strong>Efficient scheduling for the massive random access Gaussian channel</strong> <br>
-  Gustavo Kasper Facenda and Danilo Silva<br>
-  IEEE Transactions on Wireless Communications, 2020</li>
+  <li>
+    <strong>Adaptive relaying for streaming erasure codes in a three node relay network</strong><br>
+    Gustavo Kasper Facenda, M. Nikhil Krishnan, Elad Domanovitz, Silas L. Fong, Ashish Khisti, Wai-Tian Tan and John Apostolopoulos<br>
+    IEEE Transactions on Information Theory, 2023.
+  </li>
+  <button onclick="myFunction('adaptivet-it')">Show Abstract</button> Available on <a href="https://ieeexplore.ieee.org/abstract/document/10064107" target="_blank">IEEExplore</a>.
+  <div class="markdown-inner" id='adaptivet-it' style='display:none'>
+  <p>This paper investigates adaptive streaming codes over a three-node relayed network. In this setting, a source node transmits a sequence of message packets to a destination through a relay. The source-to-relay and relay-to-destination links are unreliable and introduce at most N<sub>1</sub> and N<sub>2</sub> packet erasures, respectively. The destination node must recover each message packet within a strict delay constraint T. The paper presents achievable streaming codes for all feasible parameters {N<sub>1</sub>,N<sub>2</sub>,T} that exploit the fact that the relay naturally observes the erasure pattern occurring in the link from source to relay, thus it can adapt its relaying strategy based on these observations. In a recent work, Fong et al. provide streaming codes featuring channel-state-independent relaying strategies. The codes proposed in this paper achieve rates higher than the ones proposed by Fong et al. whenever N<sub>2</sub>>N<sub>1</sub>, and achieve the same rate when N<sub>2</sub>=N<sub>1</sub>. The paper also presents an upper bound on the achievable rate that takes into account erasures in both links in order to bound the rate in the second link. The upper bound is shown to be tighter than a trivial bound that considers only the erasures in the second link.
+  </p></div>
+  <li>
+    <strong>Streaming Erasure Codes over Multi-Access Relayed Networks</strong><br>
+    Gustavo Kasper Facenda, Elad Domanovitz, Ashish Khisti, Wai-Tian Tan and John Apostolopoulos<br>
+    Transactions on Information Theory, 2022.
+  </li>
+  <button onclick="myFunction('multiaccess')">Show Abstract</button> Available on <a href="https://ieeexplore.ieee.org/abstract/document/9916294" target="_blank">IEEExplore</a>.
+  <div class="markdown-inner" id='multiaccess' style='display:none'>
+  <p>Many emerging multimedia streaming applications involve multiple users communicating under strict latency constraints. In this paper we study streaming codes for a network involving two source nodes, one relay node and a destination node. In our setting, each source node transmits a stream of messages, through the relay, to a destination, who is required to decode the messages under a strict delay constraint. For the case of a single source node, a class of streaming codes has been proposed by Fong et al. [2], using the concept of {\em delay-spectrum}. In the present work we present an in-depth analysis of the properties of delay-spectrum and apply them to develop streaming codes for our proposed setting through a novel framework. Our first scheme involves greedily selecting the rate on the link from relay to destination and using properties of the delay-spectrum to find feasible streaming codes that satisfy the required delay constraints. We provide a closed form expression for the achievable rate region and identify conditions when the proposed scheme is optimal by establishing a natural outer bound. Our second scheme builds upon this approach, but uses a numerical optimization-based approach to improve the achievable rate region over the first scheme. We demonstrate that our proposed schemes achieve significant improvements over baseline schemes based on single-user codes.
+  </p></div>
+  <li>
+    <strong>Efficient scheduling for the massive random access Gaussian channel</strong> <br>
+    Gustavo Kasper Facenda and Danilo Silva<br>
+    IEEE Transactions on Wireless Communications, 2020</li>
   <button onclick="myFunction('gaussianmrac')">Show Abstract</button> See on <a href="https://ieeexplore.ieee.org/abstract/document/9163281" target="_blank">IEEExplore</a>.
   <div class="markdown-inner" id='gaussianmrac' style="display:none">
     <p>This article investigates the massive random access Gaussian channel with a focus on small payloads. For this problem, grant-based schemes have been regarded as inefficient due to the necessity of large feedbacks and the use of inefficient scheduling request methods. This articles attempts to answer whether grant-based schemes can be competitive against state-ot-art grantless schemes and worthy of further investigation. In order to compare these schemes fairly, a novel model is proposed, and, under this model, a novel grant-based scheme is proposed. The scheme uses Ordentlich and Polyanskiy's grantless method to transmit small coordination indices in order to perform the scheduling request, which allows both the request from the users to be efficient and the feedback to be small. We also present improvements to the Ordentlich and Polyanskiy's scheme, allowing it to transmit information through the choice of sub-block, as well as to handle collisions of the same message, significantly improving the method for very small messages. Simulation results show that, if a small feedback is allowed, the proposed scheme performs closely to the state-of-art while using simpler coding schemes, suggesting that novel grant-based schemes should not be dismissed as a potential solution to the massive random access problem.</p>
   </div>
+  
+
+
+
 </ul>
 <h1 id="journal-preprints">Journal Pre-prints</h1>
 <ul>
-  <li><strong>Adaptive relaying for streaming erasure codes in a three node relay network</strong><br>
-    Gustavo Kasper Facenda, M. Nikhil Krishnan, Elad Domanovitz, Silas L. Fong, Ashish Khisti, Wai-Tian Tan and John Apostolopoulos<br>
-    Submitted to Transactions on Information Theory.
-  </li>
-    <button onclick="myFunction('adaptivet-it')">Show Abstract</button> Available on <a href="https://arxiv.org/abs/2203.05102" target="_blank">arXiv</a>.
-    <div class="markdown-inner" id='adaptivet-it' style='display:none'>
-    <p>This paper investigates adaptive streaming codes over a three-node relayed network. In this setting, a source node transmits a sequence of message packets to a destination through a relay. The source-to-relay and relay-to-destination links are unreliable and introduce at most N<sub>1</sub> and N<sub>2</sub> packet erasures, respectively. The destination node must recover each message packet within a strict delay constraint T. The paper presents achievable streaming codes for all feasible parameters {N<sub>1</sub>,N<sub>2</sub>,T} that exploit the fact that the relay naturally observes the erasure pattern occurring in the link from source to relay, thus it can adapt its relaying strategy based on these observations. In a recent work, Fong et al. provide streaming codes featuring channel-state-independent relaying strategies. The codes proposed in this paper achieve rates higher than the ones proposed by Fong et al. whenever N<sub>2</sub>>N<sub>1</sub>, and achieve the same rate when N<sub>2</sub>=N<sub>1</sub>. The paper also presents an upper bound on the achievable rate that takes into account erasures in both links in order to bound the rate in the second link. The upper bound is shown to be tighter than a trivial bound that considers only the erasures in the second link.
-    </p></div>
-  <li><strong>Streaming Erasure Codes over Multi-Access Relayed Networks</strong><br>
-  Gustavo Kasper Facenda, Elad Domanovitz, Ashish Khisti, Wai-Tian Tan and John Apostolopoulos<br>
-  Accepted in Transactions on Information Theory.
-  </li>
-  <button onclick="myFunction('multiaccess')">Show Abstract</button> Available on <a href="https://arxiv.org/abs/2101.11117" target="_blank">arXiv</a>.
-  <div class="markdown-inner" id='multiaccess' style='display:none'>
-  <p>Many emerging multimedia streaming applications involve multiple users communicating under strict latency constraints. In this paper we study streaming codes for a network involving two source nodes, one relay node and a destination node. In our setting, each source node transmits a stream of messages, through the relay, to a destination, who is required to decode the messages under a strict delay constraint. For the case of a single source node, a class of streaming codes has been proposed by Fong et al. [2], using the concept of {\em delay-spectrum}. In the present work we present an in-depth analysis of the properties of delay-spectrum and apply them to develop streaming codes for our proposed setting through a novel framework. Our first scheme involves greedily selecting the rate on the link from relay to destination and using properties of the delay-spectrum to find feasible streaming codes that satisfy the required delay constraints. We provide a closed form expression for the achievable rate region and identify conditions when the proposed scheme is optimal by establishing a natural outer bound. Our second scheme builds upon this approach, but uses a numerical optimization-based approach to improve the achievable rate region over the first scheme. We demonstrate that our proposed schemes achieve significant improvements over baseline schemes based on single-user codes.
-  </p></div>
+  
+  
 </ul>
 <h1 id="conference-papers">Conference Papers</h1>
 <h2>English Papers</h2>
